@@ -37,3 +37,28 @@ function getInfo() {
                 
             })
     }
+
+
+    /* The next 5 days Weather */
+    function fiveDaysApi() {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=7eb77816dcc99ae2a3625aa6fdd7fd5c")
+            .then(function (data) {
+                return data.json();
+            }).then(function (data) {
+                $("#fetch-five").empty();
+                console.log(data);
+                for (let i = 1; i < 35; i += 8) {
+                    let days = data.list[i];                   
+                    let cards = $('.fetch-five');
+                    let cardInit = $("<div>").addClass("col-sm-2 whole");
+                    let cardDay = $("<h2>").text(days.dt_txt.slice(0, 10));
+                    let degree = $("<p>").text(Math.round(days.main.temp) + "˚C");
+                    let humid = $("<p>").text("Humidity: " + days.main.humidity + "%");
+                    let wind = $("<p>").text("wind Speed: " + Math.round(days.wind.speed) + " mph");
+                    let icon = $("<img>");
+                    icon.attr("src", "http://openweathermap.org/img/wn/" + days.weather[0].icon + "@2x.png");
+                    $("#fetch-five").append(cardInit.append(cardDay, degree, icon, humid, wind));
+                    $("#five-days").append(cards);
+                }
+            })
+    }
