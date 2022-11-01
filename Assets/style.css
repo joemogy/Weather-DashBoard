@@ -2,19 +2,42 @@ header{
     text-align: center;
     background-color: #00eeff;
     border: 3px solid #0066ff;;
-  }
+}
   
   h2{
     text-align: center;
-  } 
+} 
 
 .humidity, .wind, .iconexp, .lead, .date-off{
     font-weight: 666;
     text-align: center;
-  }
+}
   
-  .current-time{
+.current-time{
     font-weight: 999;
     text-align: center;
+}
+
+.pickedcity {
+    font-weight: 999;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+  
+.history {
+    cursor: pointer;
+    font-size: 33px;  
+    text-align: left;
+    width: auto;
+    margin-top: 9px;
+    border: 3px solid#0066ff;
+    background-color: #00eeff;
+}
+  
+.history:hover{
+    background-color:#0066ff ;
+    transition: background-color 0.6s
   }
   
