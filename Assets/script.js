@@ -97,3 +97,19 @@ function getInfo() {
         $("#given-input").val("");
         $("#issues").css('display', 'block');
     });
+
+    
+    searchedCities();
+
+    /* upon click of city in search history */
+    $(document).on("click", ".history", function () {
+        city = $(this).text();
+        $(city).on("click", getApi)
+        getApi();
+        fiveDaysApi();
+    });
+
+    localStorage.removeItem('history'); 
+    // clean's storage when refresh the page (2 times)
+}
+$(document).ready(getInfo);
