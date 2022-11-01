@@ -7,4 +7,14 @@ header{
   h2{
     text-align: center;
   } 
+
+.humidity, .wind, .iconexp, .lead, .date-off{
+    font-weight: 666;
+    text-align: center;
+  }
+  
+  .current-time{
+    font-weight: 999;
+    text-align: center;
+  }
   
