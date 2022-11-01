@@ -62,3 +62,17 @@ function getInfo() {
                 }
             })
     }
+
+
+    /* Cities searched history function */
+    function searchedCities() {
+        $("#searched").empty();
+        for (let i = 0; i < citySearched.length; i++) {
+            let el = $("<p class='history'>");
+            el.attr("data", citySearched[i]);
+            el.text(citySearched[i]);
+            $("#searched").append(el);
+
+        }
+
+    }
