@@ -76,3 +76,24 @@ function getInfo() {
         }
 
     }
+
+
+    /* upon click function */
+    $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+        city = $("#given-input").val().trim();
+
+        if (!citySearched.includes(city)) {
+            (citySearched).push(city);
+        }
+        if (citySearched.length > 5) {
+            citySearched.shift();
+        }
+
+        searchedCities();
+        getApi();
+        fiveDaysApi();
+        localStorage.setItem("history", JSON.stringify(citySearched));
+        $("#given-input").val("");
+        $("#issues").css('display', 'block');
+    });
