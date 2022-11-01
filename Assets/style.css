@@ -4,11 +4,11 @@ header{
     border: 3px solid #0066ff;;
 }
   
-  h2{
+h2{
     text-align: center;
 } 
-
-.humidity, .wind, .iconexp, .lead, .date-off{
+  
+  .humidity, .wind, .iconexp, .lead, .date-off{
     font-weight: 666;
     text-align: center;
 }
@@ -17,7 +17,7 @@ header{
     font-weight: 999;
     text-align: center;
 }
-
+  
 .pickedcity {
     font-weight: 999;
     text-align: center;
@@ -39,5 +39,17 @@ header{
 .history:hover{
     background-color:#0066ff ;
     transition: background-color 0.6s
-  }
+}
+  
+.whole {
+    background-color:#00eeff;
+    color: black ;
+    font-weight: 666;
+    margin-left: 33px;
+    margin-top: 33px;
+    padding: 33px;
+    text-align: center;
+    border: 3px solid#0066ff;
+    border-radius: 33px;
+}
   
