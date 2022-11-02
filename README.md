@@ -41,7 +41,7 @@ git pull
 
 ## Screenshot
 
-![ScreenShot](./Assets/img/Screenshot.png)
+![alt text](./Assets/img/Screenshot.png)
 
 
 ##Credits
